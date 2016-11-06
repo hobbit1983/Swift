@@ -1,4 +1,7 @@
 This is a sample piece of swift code that solves the following:
 
-Given a string of numbers insert 2 addition symbols to produce the smallest 
-sum
+Given a string of numbers insert 2 addition symbols to produce both
+the smallest and largest sum
+
+Response String is given stating the position of the two symbols 
+and the two sums
