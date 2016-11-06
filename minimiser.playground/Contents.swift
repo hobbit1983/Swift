@@ -2,12 +2,17 @@
 
 import Cocoa
 
+func findMinAndMax(inputstr:String){
+    print("Resolving for String: " + inputstr)
+    print(minimiser(inputstr: inputstr))
+    print(maximiser(inputstr: inputstr))
+}
+
 /*
  Returns a string with two '+' symbols 
  inserted to give the smallest possible sum
  */
 func minimiser(inputstr: String) ->String{
-    print("Resolving for String: " + inputstr)
     let characters = Array(inputstr.characters)
     var currentMinimum = Int.max
     var bestPosA = 0;
@@ -29,9 +34,11 @@ func minimiser(inputstr: String) ->String{
 
     return "Min " + createNewString(numbers: characters, posA: bestPosA, posB: bestPosB)
 }
-
+/*
+ Returns a string with two '+' symbols
+ inserted to give the smallest possible sum
+ */
 func maximiser(inputstr: String) ->String{
-    print("Resolving for String: " + inputstr)
     let characters = Array(inputstr.characters)
     var currentMinimum = Int.min
     var bestPosA = 0;
@@ -75,8 +82,6 @@ func createNewString(numbers: Array<Character>,posA: Int, posB: Int) -> String{
     return response
 }
 
-print(minimiser(inputstr: "123456789"))
-print(maximiser(inputstr: "123456789"))
-print(minimiser(inputstr: "8924658371"))
-print(maximiser(inputstr: "8924658371"))
+print(findMinAndMax(inputstr: "123456789"))
+print(findMinAndMax(inputstr: "8924658371"))
 
