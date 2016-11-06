@@ -1,3 +1,11 @@
+//
+//  main.swift
+//  minAndMax
+//
+//  Created by William Yates on 06/11/2016.
+//  Copyright © 2016 ibm. All rights reserved.
+//
+
 //: Playground - noun: a place where people can play
 
 import Cocoa
@@ -9,7 +17,7 @@ func findMinAndMax(inputstr:String){
 }
 
 /*
- Returns a string with two '+' symbols 
+ Returns a string with two '+' symbols
  inserted to give the smallest possible sum
  */
 func minimiser(inputstr: String) ->String{
@@ -31,7 +39,7 @@ func minimiser(inputstr: String) ->String{
             }
         }
     }
-
+    
     return "Min " + createNewString(numbers: characters, posA: bestPosA, posB: bestPosB)
 }
 /*
@@ -72,7 +80,7 @@ func calculate(numbers: Array<Character>, posA: Int, posB: Int) ->Int {
     answer = number1!
     answer += number2!
     answer += number3!
-  
+    
     return answer
 }
 
@@ -82,6 +90,14 @@ func createNewString(numbers: Array<Character>,posA: Int, posB: Int) -> String{
     return response
 }
 
-print(findMinAndMax(inputstr: "123456789"))
-print(findMinAndMax(inputstr: "8924658371"))
+func getInputData(){
+    print("Enter a single string of characters")
+    let response = readLine(strippingNewline: true)
+    if (response != nil){
+        findMinAndMax(inputstr: response!)
+    }else{
+        print("No String passed")
+    }
+}
 
+getInputData()
