@@ -6,7 +6,6 @@
 //  Copyright © 2016 ibm. All rights reserved.
 //
 
-//: Playground - noun: a place where people can play
 
 import Cocoa
 
@@ -44,7 +43,7 @@ func minimiser(inputstr: String) ->String{
 }
 /*
  Returns a string with two '+' symbols
- inserted to give the smallest possible sum
+ inserted to give the largest possible sum
  */
 func maximiser(inputstr: String) ->String{
     let characters = Array(inputstr.characters)
